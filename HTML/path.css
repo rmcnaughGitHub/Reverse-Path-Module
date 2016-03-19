@@ -1,0 +1,32 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+}
+
+div{
+  /*outline: 1px solid #f00;*/
+}
+
+.outer-container {
+	display: inline-block;
+	width: 100%;
+}
+
+.container {
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.buttonControl {
+	padding: 0 0 20px 0;
+}
+
+.platform {
+	display: inline-block;
+	margin: 10px 20px;
+}
+
+.inputControl {
+	padding: 0 0 30px 0;
+}
