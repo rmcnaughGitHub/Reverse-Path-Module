@@ -7,15 +7,22 @@ var reverseString = (function(){
 
 	reverseThis = function(){
 		// get button
-		var rr = document.getElementById('reverseID');
+		var rr = document.getElementById('reverseID'),
+		entInput = document.getElementById('enterID');
+		
 		rr.addEventListener('click', function(){
 			fire();
 		});
 
+		entInput.onkeypress = function(e){
+			if( e.keyCode == 13 ) {
+				fire();
+			}
+		}
+
 		function fire(){
 			// get input values 
 			var ent = document.getElementById('enterID').value,
-				entInput = document.getElementById('enterID'),
 				outp = document.getElementById('outputID'),
 				tobeReversed;
 
@@ -24,13 +31,6 @@ var reverseString = (function(){
 				console.log( 'enterID value = ' + ent.match(/\\/g) );
 				tobeReversed = ent.replace(/\\/g, '/');
 				outp.value = tobeReversed;
-
-				entInput.onkeypress = function(e){
-					if( e.keyCode == 13 ) {
-						outp.value = tobeReversed;
-						console.log('e.keyCode = ' + e.keyCode);
-					}
-				}
 				console.log('outputID value = ' + outp.value);
 
 			}
@@ -39,13 +39,6 @@ var reverseString = (function(){
 				console.log( 'enterID value = ' + ent.match(/\//g) );
 				tobeReversed = ent.replace(/\//g, '\\');
 				outp.value = tobeReversed;
-
-				entInput.onkeypress = function(e){
-					if( e.keyCode == 13 ) {
-						outp.value = tobeReversed;
-						console.log('e.keyCode = ' + e.keyCode);
-					}
-				}
 				console.log('outputID value = ' + outp.value);
 			}
 		
