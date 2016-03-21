@@ -9,7 +9,7 @@ var reverseString = (function(){
 		// get button
 		var rr = document.getElementById('reverseID'),
 		entInput = document.getElementById('enterID');
-		
+
 		rr.addEventListener('click', function(){
 			fire();
 		});
@@ -45,6 +45,7 @@ var reverseString = (function(){
 		}
 	}
 
+	//Object literal
 	return {
 	  init: init
 	};
